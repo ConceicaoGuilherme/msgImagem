@@ -1,0 +1,181 @@
+
+/*Formatação da paginas*/
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 1250vh 10vh;
+    grid-template-areas: 'h n n n'
+                         'm m m a'
+                         'f f f f';
+}
+
+
+header{ 
+    display: flex;
+    grid-area: h;
+    align-items: center;
+    background-color: #fff;
+}
+
+#logoMsg{   
+    width: 15vh;
+    margin: 10vh
+}
+
+nav{
+    grid-area: n;
+    background-color: #fff;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6em;
+}
+
+main{
+    grid-area: m;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.divConteudo{
+    padding: 2vh;
+}
+
+.imagem{
+    width: 100%;
+}
+
+.divLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:  rgb(253, 129, 129)
+}
+
+.downLinks{
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.divLinks:hover{
+    background-color: white;
+}
+
+
+aside{
+    grid-area: a;
+    background-color: #eee;
+    
+}
+
+footer{
+    grid-area: f;
+    background-color: rgb(255, 129, 129);
+    color: #000;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+footer a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    background-color: white;
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 10vh 600vh 10vh 10vh;
+        grid-template-areas: 'h'
+                             'n'
+                             'm'
+                             'a'
+                             'f'
+    }
+
+    header{
+        grid-area: h;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #logoMsg{   
+        width: 15vh;
+    }
+
+
+    nav{
+        grid-area: n;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+
+    nav ul li{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav ul li a{
+        margin-left: 2px;
+        font-size: 1.2rem;   
+    }
+
+    main{
+        grid-area: m;
+    }
+
+
+    aside{
+        grid-area: a ;
+    }
+
+    footer{
+        grid-area: f;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
